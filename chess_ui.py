@@ -144,8 +144,24 @@ class ChessBoardFrame(customtkinter.CTkFrame):
         type = payload.get('chess')
         if type == 'invite':
             self.pending_invite = sender
-            name = sender # lookup name if possible
+            
+            # Lookup Name
+            name = str(sender)
+            if self.mesh_interface:
+                nodes = self.mesh_interface.get_nodes()
+                if sender in nodes:
+                     user = nodes[sender].get('user', {})
+                     name = user.get('longName') or user.get('shortName') or name
+                else:
+                     # Try string ID match if dict keys are diff type
+                     for nid, data in nodes.items():
+                          if str(nid) == str(sender):
+                               user = data.get('user', {})
+                               name = user.get('longName') or user.get('shortName') or name
+                               break
+            
             self.status_var.set(f"Invite from {name}!")
+            self.btn_accept.configure(text=f"Play vs {name}")
             self.btn_accept.pack(side="right", padx=5)
             
         elif type == 'accept':
