@@ -1,0 +1,8 @@
+meshtastic
+customtkinter
+tkintermapview
+pillow
+packaging
+# pyserial is a dependency of meshtastic, but good to have explicit if needed.
+pyserial
+pyinstaller
