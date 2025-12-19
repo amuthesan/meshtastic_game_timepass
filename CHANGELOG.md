@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file.
 
+## [v0.0.2] - 2025-12-20
+
+### ✨ UI & UX
+- **Chess Invites**: Now display the sender's name (e.g., "Invite from **Node123**").
+- **Accept Button**: Updates dynamically to "Play vs [Name]".
+- **Traceroute**: Fixed "flashing" list by optimizing redraws.
+
+### ⚡ Stability
+- **Threading**: Game Invites and Trace requests are now threaded, preventing the UI from hanging/freezing during network operations.
+
+### 📚 Documentation
+- Added "Experimental/Unofficial" warning.
+
 ## [v0.0.1] - 2025-12-20
 
 ### 🚀 New Features
