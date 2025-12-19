@@ -1,5 +1,11 @@
 # Meshtastic Desktop Node (with Multiplayer Chess)
 
+> [!WARNING]
+> **Unofficial & Experimental**
+> This project is **not official** and is an experimental playground to explore Meshtastic capabilities (like multiplayer gaming).
+>
+> **High Network Usage**: The "Game" feature sends multiple Direct Messages (DMs) per game. This may congest the mesh network. Use responsibly and avoid spamming busy channels.
+
 A feature-rich Desktop GUI for [Meshtastic](https://meshtastic.org/) nodes, built with Python and CustomTkinter. 
 
 This application connects to your Meshtastic device via USB/Serial and provides a user-friendly dashboard for messaging, mapping, network debugging, and **Multiplayer Gaming**.
